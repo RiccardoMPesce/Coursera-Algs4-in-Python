@@ -1,0 +1,2 @@
+class Percolation:
+    pass

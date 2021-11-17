@@ -17,3 +17,28 @@ class WeightedQuickUnionUF:
         while (p != self._parent[p]):
             p = self._parent[p]
         return p
+
+    def connected(self, p, q):
+        self.find(p) == self.find(q)
+
+    def union(self, p, q):
+        root_p = self.find(p)
+        root_q = self.find(q)
+
+        if root_p == root_q:
+            return 
+
+        if self._size[root_p] < self._size[root_q]:
+            self._parent[root_p] = root_q
+            self._size[root_q] += self._size[root_p]
+        else:
+            self._parent[root_q] = root_p
+            self._size[root_p] += self._size[root_q]
+
+        self._count -= 1
+
+def main():
+    pass 
+
+if __name__ == "__main__":
+    main()
