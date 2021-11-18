@@ -1,9 +1,9 @@
-from . import WeightedQuickUnionUF
+from week1.WeightedQuickUnionUF import WeightedQuickUnionUF
 
 class Percolation:
     def __init__(self, n):
         self.n = n
-        self.grid = WeightedQuickUnionUF.WeightedQuickUnionUF(n * n)
+        self.grid = WeightedQuickUnionUF(n * n)
 
     def open(self, row, col):
         pass
